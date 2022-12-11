@@ -6,6 +6,7 @@
     --secondary-bg-color:#F4F4FD;
     --ending-accent-color:#E7E9FC;
     --button-focus-color: #404BBF;
+    --border-customers-color: #8E8F99; 
    
 } 
 
@@ -102,6 +103,16 @@ body {
     text-align: center;
     padding-top: 192px;
     padding-bottom: 192px; 
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 600px;
+    background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
       }
 .hero-title {
     color:var(--primary-bg-color);
@@ -162,11 +173,33 @@ body {
 .principles-list{
     display: flex;
         }
-    .title-list:not(:last-child){
+.title-list:not(:last-child){
         margin-right: 24px;
        
     }
-   
+.title-list::before{
+    display: block;
+    content: "";
+    height: 112px;
+    background-color:var(--secondary-bg-color);
+    margin-bottom: 8px;
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.icon-strategy::before{
+    background-image: url(../images/antenna.svg);
+  }
+.icon-punctuality::before{
+    background-image: url(../images/clock.svg);
+}
+.icon-diligence::before{
+    background-image: url(../images/diagram.svg);
+}
+.icon-technologies::before{
+    background-image: url(../images/astronaut.svg);
+}
 .principles-list .title {
     color: var(--title-text-color);
     }
@@ -202,7 +235,7 @@ img{
 }
 .employees-list{
  gap: 24px;
- text-align: center
+ text-align: center;
 } 
 .employees-list .names,
 .projects-list .names {
@@ -218,9 +251,75 @@ img{
 .projects-list .names{
     margin-top: 0;
 }
+.social-list{
+    margin-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    padding-left: 16px;
+}
+ .icon-social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color:var(--accent-color);
+    border-radius: 50%;
+}
+ .icon-social .icon-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        
+    }
+.customers-title {
+    color:var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 72px;}
+
+.customers-logo {
+      width: 168px;
+    height: 88px;
+    border: 1px solid var(--border-customers-color);
+    border-radius: 4px;
+}
+.customers-list{
+    display: flex;
+    gap:24px;
+}
+ .customers-logo .icon-customer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        
+    }
+.customers-logo .icon-customer:hover {
+    border: 1px solid var(--accent-color);
+    fill: currentColor;
+}
+
+.customers-logo .icon {
+fill: var(--border-customers-color);
+}
+
+
+.customers-logo .icon:hover {
+fill: var(--accent-color);
+}
+
 .profession{
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 }
 /* .projects-list .sort{
     margin-right: 24px;
